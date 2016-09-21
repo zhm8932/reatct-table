@@ -36,8 +36,8 @@
     "./node_modules/react/lib/onlyChild.js": 33,
     "./node_modules/react-dom/dist/react-dom.min.js": 34,
     "./node_modules/moment/min/moment-with-locales.min.js": 35,
-    "./node_modules/jquery/dist/jquery.min.js": 36,
-    "./node_modules/webpack/buildin/amd-options.js": 37,
-    "./node_modules/webpack/buildin/module.js": 38
+    "./node_modules/webpack/buildin/module.js": 36,
+    "./node_modules/jquery/dist/jquery.min.js": 37,
+    "./node_modules/webpack/buildin/amd-options.js": 38
   }
 }

@@ -33,15 +33,6 @@ module.exports = {
                 warnings: false
             }
         }),
-        //提供全局的变量，在模块中使用无需用require引入
-        new webpack.ProvidePlugin({
-            $: "jquery",
-            jQuery: "jquery",
-            "window.jQuery": "jquery",
-            moment: "moment",
-            'React':'react',
-            'ReactDOM':'react-dom',
-        }),
         new webpack.DllPlugin({
             /**
              * path
