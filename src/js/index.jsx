@@ -12,8 +12,7 @@ console.log("a:",a);
 
 console.log("bbb:",a);
 console.log("bbb:",a);
-console.log("bbb:",a);
-console.log("bbb:",a);
+
 
 
 

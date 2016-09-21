@@ -1,10 +1,12 @@
 const path = require('path');
 const webpack = require('webpack');
 const ExtractTextPlugin =require('extract-text-webpack-plugin');
+const isProd = process.env.NODE_ENV == 'prod'?true:false;
 
 var PATHS = {
     js:'src/js'
 }
+
 var config = {
     // cache: true,
     entry:{
@@ -72,6 +74,19 @@ var config = {
         })
 
     ]
+}
+
+if(isProd){
+    console.log("prod:生产环境")
+    config.plugins.push(
+        new webpack.optimize.UglifyJsPlugin({
+            compress:{
+                warnings:false
+            }
+        })
+    )
+}else{
+    console.log("开发环境：",isProd,process.env.NODE_ENV)
 }
 
 module.exports = config;

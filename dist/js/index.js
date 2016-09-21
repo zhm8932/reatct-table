@@ -18,8 +18,6 @@ webpackJsonp([0],[
 
 	console.log("bbb:", a);
 	console.log("bbb:", a);
-	console.log("bbb:", a);
-	console.log("bbb:", a);
 
 	var add = function add(x, y) {
 	    return x + y;
