@@ -53,7 +53,7 @@ var config = {
         //     }
         // }),
         //允许错误不打断程序
-        new webpack.NoErrorsPlugin(),
+        // new webpack.NoErrorsPlugin(),
         //把指定文件夹xia的文件复制到指定的目录
         // new ExtractTextPlugin('css/[name].css'),
         new webpack.optimize.CommonsChunkPlugin('common','common.js'),
