@@ -12,10 +12,12 @@ webpackJsonp([0],[
 	console.log("dll's React:", React);
 	console.log("dll's ReactDOM:", ReactDOM);
 
-	var a = '88883ddd33';
+	var a = '88883ddd331111';
 
 	console.log("a:", a);
 
+	console.log("bbb:", a);
+	console.log("bbb:", a);
 	console.log("bbb:", a);
 	console.log("bbb:", a);
 
@@ -38,7 +40,7 @@ webpackJsonp([0],[
 	        return React.createElement(
 	            "p",
 	            null,
-	            "Hello !!!"
+	            "Hello !!!!!"
 	        );
 	    }
 	});

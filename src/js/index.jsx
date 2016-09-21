@@ -6,12 +6,16 @@
 console.log("dll's React:", React);
 console.log("dll's ReactDOM:", ReactDOM);
 
-let a = '88883ddd33';
+let a = '88883ddd331111';
 
 console.log("a:",a);
 
 console.log("bbb:",a);
 console.log("bbb:",a);
+console.log("bbb:",a);
+console.log("bbb:",a);
+
+
 
 let add = (x,y)=>x+y;
 
@@ -27,7 +31,7 @@ console.log('moment:',moment().locale('zh-cn').format('LLLL'))
 
 var  Hello = React.createClass({
     render(){
-        return <p>Hello !!!</p>
+        return <p>Hello !!!!!</p>
     }
 })
 
