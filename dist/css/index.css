@@ -1,9 +1,36 @@
+input, select {
+  padding: 0px;
+  margin: 0px; }
+
 body {
   background: #f2f2f2;
   width: 70%;
   margin: 0 auto;
-  font-size: 20px;
-  color: #ff00bb; }
+  font-size: 20px; }
 
 .app {
-  font-size: 40px; }
+  font-size: 20px; }
+
+.j-score select {
+  height: 30px;
+  line-height: 30px;
+  padding: 0 5px; }
+
+.j-score input {
+  height: 26px; }
+
+table {
+  width: 600px;
+  margin: 30px 0;
+  text-align: center;
+  font-size: 16px;
+  line-height: 30px;
+  border-collapse: collapse; }
+  table tr:nth-child(even) {
+    background-color: #FFF; }
+  table tr td, table tr th {
+    border: 1px solid #ccc; }
+    table tr td span, table tr th span {
+      padding: 5px;
+      cursor: pointer;
+      color: #1171cc; }

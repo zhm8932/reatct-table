@@ -9,7 +9,8 @@ var config = {
     // cache: true,
     entry:{
         index:path.join(__dirname,PATHS.js,'index.jsx'),
-        page:path.join(__dirname,PATHS.js,'page.js')
+        page:path.join(__dirname,PATHS.js,'page.js'),
+        table1:path.join(__dirname,PATHS.js,'table1.jsx')
     },
     output:{
         // path:'js/',

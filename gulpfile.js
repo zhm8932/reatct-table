@@ -13,7 +13,8 @@ const PATHS = {
     clientJs:'src/js/**/*.js',
     clientJsx:'src/js/**/*.jsx',
     html:'dist/**/*.html',
-    js:'dist/**/*.js'
+    js:'dist/**/*.js',
+    webpackConfig:'webpack.config.js'
 }
 gulp.task('sass',function () {
     return gulp.src(PATHS.sass)
@@ -21,15 +22,6 @@ gulp.task('sass',function () {
         .pipe(gulp.dest('dist/css'))
         .pipe(reload({stream:true}))
 })
-
-// 处理完JS文件后返回流
-// gulp.task('js', function () {
-//     return gulp.src('js/*js')
-//         .pipe(browserify())
-//         .pipe(uglify())
-//         .pipe(gulp.dest('dist/js'));
-// });
-
 
 gulp.task("webpack:dll", function(callback) {
     var myConfig = Object.create(webpackDllConfig);
@@ -68,9 +60,12 @@ gulp.task('serve',['sass','webpack'],function () {
             baseDir:"./dist"
         }
     })
+})
 
+gulp.task('watch',function () {
     gulp.watch(PATHS.sass,['sass']);
     gulp.watch([PATHS.clientJs,PATHS.clientJsx],['webpack']);
+    gulp.watch(PATHS.webpackConfig,['webpack']);
 
 
     gulp.watch(PATHS.js).on('change',reload);
@@ -78,7 +73,6 @@ gulp.task('serve',['sass','webpack'],function () {
 })
 
 
-
 gulp.task('dll',['webpack:dll']);
 
-gulp.task('default',['serve']);
+gulp.task('default',['serve','watch']);
