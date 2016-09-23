@@ -1,3 +1,5 @@
+//使用了props进行组件间通讯
+
 // 测试数据
 var _score = [
     {name: '张三', gender: '男', chinese: 85, math: 98, _id:0},

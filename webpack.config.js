@@ -10,7 +10,9 @@ var config = {
     entry:{
         index:path.join(__dirname,PATHS.js,'index.jsx'),
         page:path.join(__dirname,PATHS.js,'page.js'),
-        table1:path.join(__dirname,PATHS.js,'table1.jsx')
+        table1:path.join(__dirname,PATHS.js,'table1.jsx'),
+        table2:path.join(__dirname,PATHS.js,'table2.jsx'),
+        table3:path.join(__dirname,PATHS.js,'table3.jsx')
     },
     output:{
         // path:'js/',
@@ -18,8 +20,6 @@ var config = {
         path: path.join(__dirname, "dist/js/"), //文件输出目录
         // publicPath: "dist/js/",        //用于配置文件发布路径，如CDN或本地服务器
         filename:'[name].js'
-
-
     },
     resolve:{
         extensions:["",".js",".jsx",".scss",".json"],

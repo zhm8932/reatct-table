@@ -56,6 +56,7 @@ gulp.task("webpack", function(callback) {
 gulp.task('serve',['sass','webpack'],function () {
     browserSync.init({
         open: false,  //停止自动打开浏览器
+        port:4000,
         server:{
             baseDir:"./dist"
         }
@@ -64,9 +65,8 @@ gulp.task('serve',['sass','webpack'],function () {
 
 gulp.task('watch',function () {
     gulp.watch(PATHS.sass,['sass']);
-    gulp.watch([PATHS.clientJs,PATHS.clientJsx],['webpack']);
     gulp.watch(PATHS.webpackConfig,['webpack']);
-
+    gulp.watch([PATHS.clientJs,PATHS.clientJsx],['webpack']);
 
     gulp.watch(PATHS.js).on('change',reload);
     gulp.watch(PATHS.html).on('change',reload);
