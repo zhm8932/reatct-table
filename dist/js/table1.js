@@ -1,4 +1,4 @@
-webpackJsonp([2],[
+webpackJsonp([3],[
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -177,6 +177,8 @@ webpackJsonp([2],[
 	            // !scoreItem.deleteFlag&&scoreNotes.push(<ScoreItem score={scoreItem} handlerDlete={_this.handlerDlete}/>)
 	        });
 
+	        console.log("scoreNotes:", scoreNotes);
+	        console.log("scoreNotes:", scoreNotes);
 	        console.log("scoreNotes:", scoreNotes);
 	        return React.createElement(
 	            'table',

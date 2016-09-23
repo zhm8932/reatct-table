@@ -148,6 +148,8 @@ let ScoreTable = React.createClass({
 
 
         console.log("scoreNotes:",scoreNotes)
+        console.log("scoreNotes:",scoreNotes)
+        console.log("scoreNotes:",scoreNotes)
         return(
             <table>
                 <thead>

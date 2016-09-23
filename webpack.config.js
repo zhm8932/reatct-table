@@ -12,11 +12,10 @@ var config = {
         page:path.join(__dirname,PATHS.js,'page.js'),
         table1:path.join(__dirname,PATHS.js,'table1.jsx'),
         table2:path.join(__dirname,PATHS.js,'table2.jsx'),
-        table3:path.join(__dirname,PATHS.js,'table3.jsx')
+        table3:path.join(__dirname,PATHS.js,'table3.jsx'),
+        tab:path.join(__dirname,PATHS.js,'tab.jsx'),
     },
     output:{
-        // path:'js/',
-        // path: path.join(__dirname, "dist"),
         path: path.join(__dirname, "dist/js/"), //文件输出目录
         // publicPath: "dist/js/",        //用于配置文件发布路径，如CDN或本地服务器
         filename:'[name].js'

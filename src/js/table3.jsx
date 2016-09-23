@@ -186,6 +186,7 @@ ScoreItem = React.createClass({
     }
 });
 
+require('./page2');
 
 // BETTER
 var MY_TOPIC = "hello";

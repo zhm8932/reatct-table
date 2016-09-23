@@ -1,6 +1,5 @@
-webpackJsonp([4],{
-
-/***/ 0:
+webpackJsonp([5],[
+/* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(React, ReactDOM) {'use strict';
@@ -275,6 +274,8 @@ webpackJsonp([4],{
 	    }
 	});
 
+	__webpack_require__(7);
+
 	// BETTER
 	var MY_TOPIC = "hello";
 	PubSub.subscribe(MY_TOPIC, function (msg, data) {
@@ -300,8 +301,17 @@ webpackJsonp([4],{
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1), __webpack_require__(4)))
 
 /***/ },
+/* 1 */,
+/* 2 */,
+/* 3 */,
+/* 4 */,
+/* 5 */
+/***/ function(module, exports, __webpack_require__) {
 
-/***/ 6:
+	module.exports = (__webpack_require__(3))(35);
+
+/***/ },
+/* 6 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*
@@ -551,6 +561,26 @@ webpackJsonp([4],{
 	}));
 
 
-/***/ }
+/***/ },
+/* 7 */
+/***/ function(module, exports, __webpack_require__) {
 
-});
+	/* WEBPACK VAR INJECTION */(function(moment) {"use strict";
+
+	// var $ = require('jquery');
+	// var React = require('react');
+	// var ReactDOM = require('react-dom');
+
+	var str = 'this is a page!!!!';
+	// var moment = require('moment');
+
+	console.log("str:", str);
+	console.log("str:", str);
+	console.log("str:", str);
+	console.log("str:", str);
+
+	console.log('moment', moment().locale('zh-cn').format('LLLL'));
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5)))
+
+/***/ }
+]);
