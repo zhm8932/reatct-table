@@ -13,6 +13,7 @@ var config = {
         table1:path.join(__dirname,PATHS.js,'table1.jsx'),
         table2:path.join(__dirname,PATHS.js,'table2.jsx'),
         table3:path.join(__dirname,PATHS.js,'table3.jsx'),
+        table4:path.join(__dirname,PATHS.js,'table4.jsx'),
         tab:path.join(__dirname,PATHS.js,'tab.jsx'),
     },
     output:{

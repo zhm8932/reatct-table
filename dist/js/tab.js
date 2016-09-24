@@ -12,13 +12,13 @@ webpackJsonp([2],[
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var TabsControl = function (_React$Component) {
-	    _inherits(TabsControl, _React$Component);
+	var TabBox = function (_React$Component) {
+	    _inherits(TabBox, _React$Component);
 
-	    function TabsControl() {
-	        _classCallCheck(this, TabsControl);
+	    function TabBox() {
+	        _classCallCheck(this, TabBox);
 
-	        var _this2 = _possibleConstructorReturn(this, (TabsControl.__proto__ || Object.getPrototypeOf(TabsControl)).call(this));
+	        var _this2 = _possibleConstructorReturn(this, (TabBox.__proto__ || Object.getPrototypeOf(TabBox)).call(this));
 
 	        _this2.state = {
 	            currentIndex: 0
@@ -26,15 +26,27 @@ webpackJsonp([2],[
 	        return _this2;
 	    }
 
-	    _createClass(TabsControl, [{
+	    _createClass(TabBox, [{
 	        key: "check_tittle_index",
 	        value: function check_tittle_index(index) {
-	            return index === this.state.currentIndex ? "Tab_tittle active" : "Tab_tittle";
+	            console.log("index:", index);
+	            return index === this.state.currentIndex ? "active" : "";
+	            // return index === this.state.currentIndex?"Tab_tittle active" : "Tab_tittle";
 	        }
 	    }, {
-	        key: "check_item_index",
-	        value: function check_item_index(index) {
+	        key: "check_content_index",
+	        value: function check_content_index(index) {
+	            // console.log("index:",index)
+	            // console.log("this.state.currentIndex:",this.state.currentIndex)
 	            return index === this.state.currentIndex ? "Tab_item show" : "Tab_item";
+	        }
+	    }, {
+	        key: "handlerClick",
+	        value: function handlerClick(index) {
+	            console.log("this:", this);
+	            console.log("index1111111111:", index);
+	            console.log("this.props11:", this.props);
+	            this.setState({ currentIndex: this.props.index });
 	        }
 	    }, {
 	        key: "render",
@@ -42,22 +54,22 @@ webpackJsonp([2],[
 	            var _this3 = this;
 
 	            var _this = this;
+	            console.log("React.Children:", React.Children);
+	            console.log("this.props.children:", this.props.children);
 	            return React.createElement(
 	                "div",
 	                null,
 	                React.createElement(
 	                    "div",
 	                    { className: "Tab_tittle_wrap" },
+	                    //动态生成Tab导航
 	                    React.Children.map(this.props.children, function (element, index) {
-	                        return (
-	                            /*箭头函数没有自己的this，这里的this继承自外围作用域，即组件本身*/
-	                            React.createElement(
-	                                "div",
-	                                { onClick: function onClick() {
-	                                        _this3.setState({ currentIndex: index });
-	                                    }, className: _this3.check_tittle_index(index) },
-	                                element.props.name
-	                            )
+	                        return React.createElement(
+	                            "div",
+	                            { onClick: function onClick() {
+	                                    _this3.setState({ currentIndex: index });
+	                                }, className: _this3.check_tittle_index(index), index: index },
+	                            element.props.name
 	                        );
 	                    })
 	                ),
@@ -67,8 +79,8 @@ webpackJsonp([2],[
 	                    React.Children.map(this.props.children, function (element, index) {
 	                        return React.createElement(
 	                            "div",
-	                            { className: _this3.check_item_index(index) },
-	                            element
+	                            { className: _this3.check_content_index(index) },
+	                            element.props.children
 	                        );
 	                    })
 	                )
@@ -76,7 +88,7 @@ webpackJsonp([2],[
 	        }
 	    }]);
 
-	    return TabsControl;
+	    return TabBox;
 	}(React.Component);
 
 	var TabComponent = function (_React$Component2) {
@@ -89,28 +101,79 @@ webpackJsonp([2],[
 	    }
 
 	    _createClass(TabComponent, [{
+	        key: "handlerC",
+	        value: function handlerC() {
+	            console.log("this.p:", this.props);
+	        }
+	    }, {
 	        key: "render",
 	        value: function render() {
 	            return React.createElement(
 	                "div",
 	                { className: "container" },
 	                React.createElement(
-	                    TabsControl,
+	                    TabBox,
 	                    null,
 	                    React.createElement(
-	                        "div",
-	                        { name: "first" },
-	                        "我是第一帧"
+	                        "ul",
+	                        { name: "教育" },
+	                        React.createElement(
+	                            "ul",
+	                            null,
+	                            React.createElement(
+	                                "li",
+	                                null,
+	                                "我是第一帧"
+	                            ),
+	                            React.createElement(
+	                                "li",
+	                                null,
+	                                "中国打破了世界软件巨头规则"
+	                            ),
+	                            React.createElement(
+	                                "li",
+	                                null,
+	                                "口语：会说中文就能说英语！"
+	                            )
+	                        )
 	                    ),
 	                    React.createElement(
-	                        "div",
-	                        { name: "second" },
-	                        "我是第二帧"
+	                        "ul",
+	                        { name: "培训" },
+	                        React.createElement(
+	                            "li",
+	                            null,
+	                            "我是第二帧"
+	                        ),
+	                        React.createElement(
+	                            "li",
+	                            null,
+	                            "中国打破了世界软件巨头规则"
+	                        ),
+	                        React.createElement(
+	                            "li",
+	                            null,
+	                            "口语：会说中文就能说英语！"
+	                        )
 	                    ),
 	                    React.createElement(
-	                        "div",
-	                        { name: "third" },
-	                        "我是第三帧"
+	                        "ul",
+	                        { name: "出国" },
+	                        React.createElement(
+	                            "li",
+	                            null,
+	                            "我是第三帧"
+	                        ),
+	                        React.createElement(
+	                            "li",
+	                            null,
+	                            "中国打破了世界软件巨头规则"
+	                        ),
+	                        React.createElement(
+	                            "li",
+	                            null,
+	                            "口语：会说中文就能说英语！"
+	                        )
 	                    )
 	                )
 	            );
