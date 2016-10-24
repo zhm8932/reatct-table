@@ -10,12 +10,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zhm8932/reatct-table.git"
+    "url": "git+https://github.com/zhm8932/webpack-gulp-react-es6-browse-sync.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/zhm8932/reatct-table/issues"
+    "url": "https://github.com/zhm8932/webpack-gulp-react-es6-browse-sync/issues"
   },
   "homepage": "https://github.com/zhm8932/reatct-table#readme",
   "devDependencies": {
