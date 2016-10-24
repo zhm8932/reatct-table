@@ -295,5 +295,5 @@ var SelectTable = React.createClass({
         this.setState( {row: item.name} );
     }
 });
-console.log("111111")
+
 ReactDOM.render(<SelectTable rows={ items }  />, document.body);

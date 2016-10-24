@@ -7,6 +7,7 @@ console.log("dll's React:", React);
 console.log("dll's ReactDOM:", ReactDOM);
 
 let a = '88883ddd33';
+let a = '88883ddd33';
 
 console.log("a:",a);
 
